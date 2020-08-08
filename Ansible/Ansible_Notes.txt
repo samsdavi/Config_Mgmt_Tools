@@ -1,0 +1,56 @@
+Configuration Mgmt Tools?
+1) Assume Legacy Application (Monolithic Application)
+2) Language -> Idempotence
+
+
+git clone https://github.com/AnjuMeleth/DevOpsMasterChef.git
+
+echo 'eval "$(chef shell-initbash)"' >> ~/.bash_profile
+
+ssh-agent 
+eval $(ssh-agent)
+
+
+
+https://docs.ansible.com/ansible/latest/modules/package_module.html
+sudo apt-get purge nginx nginx-common
+
+https://github.com/AnjuMeleth/DevOpsMasterAnsible.git - Task6
+
+To uninstall any service from the slave in Ansible
+##sudo apt-get purge nginx nginx -common
+
+To copy file from one location to other
+##sudo cp <filename> /etc/ansible
+
+**In task5 instead of state=present use state=absent to delete the service from the master.
+
+Ansible -> Agentless Architecture, Push Config
+Master and Slave Architecture
+Ansible -> Playbooks
+Modules -> User, Package, Service, File
+In playbooks if you want some thing to trigger you need to call that thing in the notify section and then run that fuction under the handlers.
+
+Chef -> Complicated
+
+Puppet -> 
+
+Ansible -> Modules, Adhoc commands, playbooks, roles
+
+Puppet - Another CMT
+
+Puppet -> System Admins, Puppet DSL
+-> Instead of playbooks we use Manifest
+Master - Slave Architecture
+AgentFull Architecture
+
+sudo /opt/puppetlabs/bin/puppetserver ca list
+sudo /opt/puppetlabs/bin/puppetserver ca sign --all
+sudo /opt/puppetlabs/bin/puppetserver ca list
+
+
+https://github.com/AnjuMeleth/spring-petclinic.git
+
+fatal: [slave1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'slave1,54.191.127.233' (ECDSA) to the list of known hosts.\r\njenkins@slave1: Permission denied (publickey).", "unreachable": true}
+
+/etc/puppetlabs/code/environments/production/manifests/
